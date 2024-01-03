@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
     public LayerMask groundLayer;
 
     // 지면에 있는지 확인하는 플래그
-    private bool isGrounded;
+    [SerializeField] private bool isGrounded;
     // BoxCollider2D 컴포넌트 참조
     private BoxCollider2D boxCollider;
 
@@ -84,7 +84,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void Jump()
+    public void Jump()
     {
         // 지면에 있을 때만 점프 실행
         if (isGrounded)
@@ -98,8 +98,9 @@ public class Movement : MonoBehaviour
     {
         // BoxCast를 사용해 지면에 닿았는지 확인
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, 0.1f, groundLayer);
-        return raycastHit.collider != null;
+        return (raycastHit.collider != null);
     }
+
 
     private void ApplyMovement(Vector2 direction)
     {

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/Tutorial.unity
     guid: 8bbc6cba01a249e44b264f6ee0afb2fb
+  - enabled: 1
+    path: Assets/01.Scenes/05.MH-Map.unity
+    guid: 6fc4c4342d8f3df469a16c9eed288358
   m_configObjects: {}
