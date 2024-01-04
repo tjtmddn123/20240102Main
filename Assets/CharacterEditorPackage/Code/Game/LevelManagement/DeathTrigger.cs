@@ -5,8 +5,9 @@ using System.Collections;
 //--------------------------------------------------------------------
 public class DeathTrigger : MonoBehaviour {
 
-    void OnTriggerEnter2D(Collider2D a_Collider)
+    void OnTriggerEnter(Collider a_Collider)
     {
+        Debug.Log("adasfasfda");
         ControlledCapsuleCollider controlledCapsuleCollider = a_Collider.GetComponent<ControlledCapsuleCollider>();
         if (controlledCapsuleCollider != null)
         {

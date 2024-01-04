@@ -1,5 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
+using System;
 
 //--------------------------------------------------------------------
 //InSceneLevelSwitcher keeps track of spawnpoints and respawning
