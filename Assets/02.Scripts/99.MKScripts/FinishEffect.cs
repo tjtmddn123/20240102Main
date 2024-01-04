@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishEffect : MonoBehaviour
 {
@@ -22,11 +23,11 @@ public class FinishEffect : MonoBehaviour
         {
             ScaleObject();
             UIManager.Instance.fadeInAndOutUi.SetBool("IsFinish", true);
-            //Invoke로 1초 지연줘서 씬체인지하면 매끄럽게 됨.
+            Invoke("SceneChange", 1.5f);
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Door")
         {
@@ -47,5 +48,10 @@ public class FinishEffect : MonoBehaviour
             rotationSpeed += rotationSpeedIncreaseRate * Time.deltaTime;
             RotateObject();
         }
+    }
+
+    private void SceneChange()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
