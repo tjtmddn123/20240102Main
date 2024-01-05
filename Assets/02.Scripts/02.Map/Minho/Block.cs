@@ -22,7 +22,7 @@ public class Block : MonoBehaviour
         colorTime = 0;
 
         Time.timeScale = 0;
-        while (colorTime <= 0.15f)
+        while (colorTime <= 0.1f)
         {
             colorTime += Time.unscaledDeltaTime;
             ChangeColor();
