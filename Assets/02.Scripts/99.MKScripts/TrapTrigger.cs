@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrapTrigger : MonoBehaviour
 {
     public GameObject[] targetTrap;
+    public GameObject deactiveTarget;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +20,10 @@ public class TrapTrigger : MonoBehaviour
                         trap.SetActive(true);
                     }
                 }
+            }
+            if (deactiveTarget != null)
+            {
+                deactiveTarget.SetActive(false);
             }
         }
     }

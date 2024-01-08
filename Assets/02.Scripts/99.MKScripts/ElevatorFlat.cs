@@ -5,13 +5,41 @@ using UnityEngine;
 
 public class ElevatorFlat : MonoBehaviour
 {
-    
+    private Tween elevatorTw;
+    private Tween invisibleTrapTw;
+    public bool iselevator;
+    public bool upFlatTrap;
+
+    private void OnEnable()
+    {
+        if (!iselevator)
+        {
+            invisibleTrapTw = DOTween.Sequence()
+            .Append(transform.DOMoveY(-3f, 1f).SetEase(Ease.Linear))
+            .Append(transform.DOMoveY(0f, 1f).SetEase(Ease.Linear));
+        }
+        if (upFlatTrap)
+        {
+            Debug.Log("velo");
+            Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+            rigidbody.velocity = new Vector2 (0f, 2f);
+        }
+    }
     void Start()
     {
-        Tween myTween = transform.DOMoveY(4.5f, 21f);
+        if (iselevator)
+        {
+            elevatorTw = transform.DOMoveY(4.5f, 21f);
 
-        myTween.SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
+            elevatorTw.SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
 
-        myTween.Play();
+            elevatorTw.Play();
+        }
+    }
+
+    private void OnDisable()
+    {
+        elevatorTw.Kill();
+        invisibleTrapTw.Kill();
     }
 }
