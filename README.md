@@ -2,7 +2,7 @@
 
 한마리의 고양의 모험! 각종 함정과 장애물을 피하며 최종 지점까지 도달하는 게임! 
 
-![slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
+![slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white) ![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
 # 장르
 액션 게임
