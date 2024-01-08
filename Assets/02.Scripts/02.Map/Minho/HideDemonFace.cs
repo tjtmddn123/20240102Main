@@ -22,7 +22,7 @@ public class HideDemonFace : MonoBehaviour
     {
         _rend.enabled = true;
         Time.timeScale = 0;
-        yield return new WaitForSecondsRealtime(1.5f);
+        yield return new WaitForSecondsRealtime(1f);
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
