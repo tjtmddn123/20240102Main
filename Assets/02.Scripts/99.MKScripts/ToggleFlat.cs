@@ -13,7 +13,7 @@ public class ToggleFlat : MonoBehaviour
     IEnumerator DeactivateSelf()
     {
         // 2초 대기
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         // 2초 후에 자기 자신을 다시 비활성화
         gameObject.SetActive(false);
