@@ -7,12 +7,19 @@ public class TutorialDoor : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 플레이어 태그를 가진 오브젝트와의 충돌을 감지
         if (collision.gameObject.tag == "Player")
         {
-            // 스타트 씬으로 이동
-            SceneManager.LoadScene("StartScene");
+            // LoadNextScene 함수를 1초 후에 호출
+            Invoke("LoadNextScene", 1.4f);
         }
     }
+
+    private void LoadNextScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
+        SceneManager.LoadScene(nextSceneIndex);
+    }
 }
+
 
