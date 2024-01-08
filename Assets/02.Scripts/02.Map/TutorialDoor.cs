@@ -9,15 +9,16 @@ public class TutorialDoor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            // 현재 씬의 인덱스를 가져옴
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-            // 다음 씬의 인덱스 계산
-            int nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
-
-            // 다음 씬 로드
-            SceneManager.LoadScene(nextSceneIndex);
+            // LoadNextScene 함수를 1초 후에 호출
+            Invoke("LoadNextScene", 1.4f);
         }
+    }
+
+    private void LoadNextScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
+        SceneManager.LoadScene(nextSceneIndex);
     }
 }
 
