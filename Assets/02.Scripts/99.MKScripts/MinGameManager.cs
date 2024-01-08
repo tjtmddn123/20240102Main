@@ -20,7 +20,7 @@ public class MinGameManager : MonoBehaviour
         {
             time += Time.deltaTime;
 
-            if (time >= 2)
+            if (time >= 3)
             {
                 if (currentIndex < autoTrap.Length)
                 {

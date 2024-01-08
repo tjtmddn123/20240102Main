@@ -7,12 +7,14 @@ public class ElevatorFlat : MonoBehaviour
 {
     private Tween elevatorTw;
     private Tween invisibleTrapTw;
+
     public bool iselevator;
+    public bool invisibleTrap;
     public bool upFlatTrap;
 
     private void OnEnable()
     {
-        if (!iselevator)
+        if (invisibleTrap)
         {
             invisibleTrapTw = DOTween.Sequence()
             .Append(transform.DOMoveY(-3f, 1f).SetEase(Ease.Linear))
@@ -20,9 +22,8 @@ public class ElevatorFlat : MonoBehaviour
         }
         if (upFlatTrap)
         {
-            Debug.Log("velo");
             Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-            rigidbody.velocity = new Vector2 (0f, 2f);
+            rigidbody.velocity = new Vector2 (0f, 7.5f);
         }
     }
     void Start()
