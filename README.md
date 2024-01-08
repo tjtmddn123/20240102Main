@@ -27,6 +27,11 @@ https://namu.wiki/w/%EC%87%BC%EB%B3%B8%EC%9D%98%20%EC%95%A1%EC%85%98?from=%EA%B3
 5. **추가 구현 사항 중 선택하여 3가지 이상 구현:**
     - 다양한 구현을 도전해 보세요.
 
+# S.A (Starting Assignments)
+<img width="674" alt="스크린샷 2024-01-08 212119" src="https://github.com/tjtmddn123/20240102Main/assets/150320634/f7bff696-878f-4d3f-b0ce-24c9103e1eb0">
+
+링크: https://www.figma.com/file/cbq4cPGt0aCwKs33xz22qD/10%EC%A1%B0?type=whiteboard&node-id=0-1&t=lOj9TMR1wkZOTFQ3-0
+
 # 역할 분배
 |이름|역할|
 |------|---|
