@@ -46,7 +46,7 @@ public class Mushroom : MonoBehaviour
         Time.timeScale = 0;
         transform.localScale = new Vector2(3f, 3f);
         transform.position = new Vector3(transform.position.x, -1.53f, 0f);
-        yield return new WaitForSecondsRealtime(1.5f);
+        yield return new WaitForSecondsRealtime(1f);
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
