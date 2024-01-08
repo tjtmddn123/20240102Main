@@ -13,7 +13,7 @@ public class NextStage : MonoBehaviour
             //Prevent death state to be used if the collider is no-clipping
             if (controlledCapsuleCollider.AreCollisionsActive())
             {
-                SceneManager.LoadScene("03.CH-Map");
+                SceneManager.LoadScene("05.MH-Map");
             }
         }
     }

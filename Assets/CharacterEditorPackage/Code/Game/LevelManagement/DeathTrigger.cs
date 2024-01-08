@@ -3,7 +3,10 @@ using System.Collections;
 //--------------------------------------------------------------------
 //When the player enters, respawn them
 //--------------------------------------------------------------------
-public class DeathTrigger : MonoBehaviour {
+public class DeathTrigger : MonoBehaviour 
+{
+    public delegate void DeathPanel();
+    public static event DeathPanel onPanel;
 
     void OnTriggerEnter(Collider a_Collider)
     {
@@ -12,12 +15,12 @@ public class DeathTrigger : MonoBehaviour {
         {
             //Prevent death state to be used if the collider is no-clipping
             if (controlledCapsuleCollider.AreCollisionsActive())
-            { 
-                Debug.Log("Death triggered by: " + transform.name);
+            {
                 if (InSceneLevelSwitcher.Get())
                 {
                     InSceneLevelSwitcher.Get().Respawn();
                 }
+                onPanel?.Invoke();
             }
         }
     }
