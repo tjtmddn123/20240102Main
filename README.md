@@ -38,7 +38,6 @@ https://namu.wiki/w/%EC%87%BC%EB%B3%B8%EC%9D%98%20%EC%95%A1%EC%85%98?from=%EA%B3
 
 # 맵 사진
 
-
 ## 1. 인트로 (서승우)
 <img width="573" alt="스크린샷 2024-01-08 211013" src="https://github.com/tjtmddn123/20240102Main/assets/150320634/93047be8-ccdc-426e-96c7-b4a15d53c106">
 
@@ -66,7 +65,7 @@ https://namu.wiki/w/%EC%87%BC%EB%B3%B8%EC%9D%98%20%EC%95%A1%EC%85%98?from=%EA%B3
 ## 9. 엔딩 (서승우)
 <img width="613" alt="스크린샷 2024-01-08 211019" src="https://github.com/tjtmddn123/20240102Main/assets/150320634/cdc342da-0777-4264-b9da-4334b37796cf">
 
-# 각자의 트러블 슈팅
+# 트러블 슈팅
 
 **서승우**
 
